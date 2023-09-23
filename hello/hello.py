@@ -15,3 +15,4 @@ print(full)
 
 bicycles = ['fuck',"you",'@@@']
 print(bicycles)
+print("this  " + bicycles[0] + '  now') #访问列表中第一个元素
