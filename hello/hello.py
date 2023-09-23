@@ -14,15 +14,33 @@ ebood.insert(6,'mind')  #['my', 'youth', 'is', 'not', 'it is a state of ', 'a ti
                         #在当前位置插入，其余元素会右移
 print(ebood) 
 
-del ebood[5]    #删除第五个元素
+
+
+#组织列表
+########以下，除sorted，全是永久的######
+
+
+#使用之理由：列表排列顺序通常无法预测
+ebood.sort()    #按照a-z排序
+print(ebood)
+ebood.sort(reverse=True)    #按照z-a排序
 print(ebood)
 
-#直接删除元素
-#错误：只能将str连接到str，而不是列表   print("befor:" + ebood)
-print('befor:')
+
+
+print(sorted(ebood))    #临时改变排序，以a-z    ###如何以z-a排序
+#没有这种写法ebood.sorted(reverse = True)
+print(ebood)    #验证临时改变顺序，原顺序z-a
+
+
+
+
+#倒着打印列表
+#即反转排列顺序
+ebood.reverse() #相当于撤销
 print(ebood)
-ebood.remove("it is a state of ")    #报错理由，将单引号写成了双引号
-#ebood.remove('it is a state of ')  ###纠正报错无关单双引号，只不过是少个空格
-ebood.remove("mind")
-print('now:')
-print(ebood)
+
+
+
+#确定列表长度
+len(ebood)  ###???为啥没有反
