@@ -16,3 +16,5 @@ print(full)
 bicycles = ['fuck',"you",'@@@']
 print(bicycles)
 print("this  " + bicycles[0] + '  now') #访问列表中第一个元素
+print(bicycles[-1]);    #倒数第一个元素
+print(bicycles[-2]);    #倒数第二个元素
