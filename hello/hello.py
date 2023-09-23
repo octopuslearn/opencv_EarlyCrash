@@ -44,3 +44,12 @@ print(ebood)
 
 #确定列表长度
 len(ebood)  ###???为啥没有反
+
+
+
+
+#cars = ['a','b','c','d']   
+#print(cars[5]) #错误：超范围
+
+#cars = []
+#print(cars[-1])    #错误：不可为空时使用
