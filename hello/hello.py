@@ -1,20 +1,8 @@
-message = "oc_learn###"
-print(message)
+#此种方法较为常用
+ebood = []  #创建空列表
+ebood.append("youth")   #append方法在列表末尾添加元素
+ebood.append('is')
+ebood.append("not")
+ebood.append("a time of life.")
 
-message = "welcome~~~"
-print(message)
-message = "welcome"
-print(message)  #welcom
-print(message.title())  #title()方法，将开头的字母从小写改成大写--->Welcom
-
-
-full = "abc" + '###'
-#full = "abc" + "###"   #单引号和双引号相同
-print(full)
-
-
-bicycles = ['fuck',"you",'@@@']
-print(bicycles)
-print("this  " + bicycles[0] + '  now') #访问列表中第一个元素
-print(bicycles[-1]);    #倒数第一个元素
-print(bicycles[-2]);    #倒数第二个元素
+print(ebood)    
