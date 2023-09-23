@@ -17,8 +17,12 @@ print(ebood)
 del ebood[5]    #删除第五个元素
 print(ebood)
 
-ebood_news = ebood.pop()    #弹出最后一个元素(删除元素并使用它,例如需要外星人被杀死的坐标以显示爆炸效果)
+#直接删除元素
+#错误：只能将str连接到str，而不是列表   print("befor:" + ebood)
+print('befor:')
 print(ebood)
-print(ebood_news)   #坐标值
-#此方法可获取最新值
-print("The latest input value is" + ':' + ebood_news)
+ebood.remove("it is a state of ")    #报错理由，将单引号写成了双引号
+#ebood.remove('it is a state of ')  ###纠正报错无关单双引号，只不过是少个空格
+ebood.remove("mind")
+print('now:')
+print(ebood)
