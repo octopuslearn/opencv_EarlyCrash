@@ -132,11 +132,11 @@ python中没有switch case
 #     case _:
 #         print("無")
 
-"""
-循环语句
-1.for循环
-2.while循环
-"""
+# """
+# 循环语句
+# 1.for循环
+# 2.while循环
+# """
 
 #1.1-while循环
 # b_in = int(input("请输入：> "))
@@ -162,8 +162,8 @@ python中没有switch case
 # for s in num:
 #     print(s)
 
-num = [1,2,3,4,5,6,7,8,9,10]
-for s in num:
-    print(s)
-else:
-    print("结束了")
+# num = [1,2,3,4,5,6,7,8,9,10]
+# for s in num:
+#     print(s)
+# else:
+#     print("结束了")
