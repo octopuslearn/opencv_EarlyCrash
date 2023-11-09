@@ -201,34 +201,114 @@ import numpy as np
 
 
 
+"""
+人脸检测
+"""
+# import cv2
+# import numpy as np
+# #加载预训练的分类器模型
+# face_detectoe = cv2.CascadeClassifier('haarcascade_frontalface_alt.xml')    #//detectoe探测器
+#
+# img = cv2.imread('purple_skirt.jpg')
+# gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)    #数据变少
+# #用于对象检测
+# # 图像金字塔的层级： detectMultiScale 方法会在不同尺度的图像上运行级联分类器，以便检测不同大小的对象。scaleFactor 决定了图像金字塔的缩放步长。较小的 scaleFactor 值会导致使用更多的尺度层级，而较大的 scaleFactor 值会减少层级的数量。
+# #
+# # 检测窗口的尺寸： scaleFactor 的值越小，意味着每个级别的图像金字塔都比前一个级别的图像小，导致检测窗口变小。这可以用于检测小尺寸对象。
+# #
+# # 通常情况下，scaleFactor 的值设置为大于1.0的小数，例如 1.1。这意味着每个级别的图像金字塔都比前一个级别的图像大约10%，并且会在不同尺度上检测对象。如果 scaleFactor 太小，可能会导致遗漏一些较小的对象，而如果太大，可能会导致检测到太多的假阳性。
+# #
+# # 调整 scaleFactor 可以根据具体的应用需求来优化对象检测性能。通常，您需要根据您希望检测的对象的大小和数据集的特性来选择合适的值。
+#
+#
+# #用于过滤检测结果的邻居数。增加这个值可以减少假阳性检测。通常设置为3。
+# face = face_detectoe.detectMultiScale(gray,
+#                                       scaleFactor=1.01,
+#                                       minNeighbors=3,
+#                                       minSize=(80, 80))
+# print(face)
+# for x, y, w, h in face:
+#     cv2.rectangle(img, (x, y), (x+w, y+h), [255, 0, 255], 3)
+#
+# cv2.imshow('img', img)
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
 
-#人脸检测
+
+# import cv2
+# import numpy as np
+#
+# if __name__ == '__main__':
+#     face_decetone = cv2.CascadeClassifier("haarcascade_frontalface_alt.xml")
+#     img = cv2.imread('purple_skirt.jpg')
+#     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+#
+#     face = face_decetone.detectMultiScale(gray, scaleFactor=1.01, minNeighbors=3, minSize=(80,80))
+#     print(face)
+#     for x,y,w,h in face:
+#         cv2.circle(img, (x+w//2, y+h//2),w//2,[0,0,255],2)  #//取整
+#
+#     cv2.imshow('img',img)
+#     cv2.waitKey(0)
+#     cv2.destroyAllWindows()
+
+
+
+"""
+人脸贴图
+"""
+# import cv2
+# import numpy as np
+#
+# if __name__ == '__main__':
+#     force_detectone = cv2.CascadeClassifier("haarcascade_frontalface_alt.xml")
+#     img = cv2.imread('purple_skirt.jpg')
+#     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+#     face = force_detectone.detectMultiScale(gray, scaleFactor=1.01, minNeighbors=3, minSize=(80, 80))
+#     print(face)
+#     cat = cv2.imread('cat_easy.jpg')
+#     for x,y,w,h in face:
+#         cv2.circle(img, (x+w//2, y+h//2), w//2, (255,0,0), 1)
+#         img[x:x+w,y:y+h] = cv2.resize(cat, (w, h))
+#     cv2.imshow('img', img)
+#     cv2.waitKey(0)
+#     cv2.destroyAllWindows()
+
+# import cv2
+# import numpy as np
+#
+# if __name__ == '__main__':
+#         force_detectone = cv2.CascadeClassifier("haarcascade_frontalface_alt.xml")
+#         img = cv2.imread('purple_skirt.jpg')
+#         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+#         face = force_detectone.detectMultiScale(gray, scaleFactor=1.01, minNeighbors=3, minSize=(80, 80))
+#         print(face)
+#         cat = cv2.imread('cat_easy.jpg')
+#         for x, y, w, h in face:
+#             cats = cv2.resize(cat,(w,h))
+#             for i in range(w):
+#                 for j in range(h):
+#                     # if (cats[i,j]>200).all():   #猫的图片只留下了白色
+#                     if not(cats[i,j]>200).all():    #只留下了黑色的猫   #如果不是白色，就往这个地方填充猫
+#                         img[i+w,j+h] = cats[i,j]
+#         cv2.imshow('img', img)
+#         cv2.waitKey(0)
+#         cv2.destroyAllWindows()
+
+
+
 import cv2
 import numpy as np
-#加载预训练的分类器模型
-face_detectoe = cv2.CascadeClassifier('haarcascade_frontalface_alt.xml')    #//detectoe探测器
 
-img = cv2.imread('purple_skirt.jpg')
-gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)    #数据变少
-#用于对象检测
-# 图像金字塔的层级： detectMultiScale 方法会在不同尺度的图像上运行级联分类器，以便检测不同大小的对象。scaleFactor 决定了图像金字塔的缩放步长。较小的 scaleFactor 值会导致使用更多的尺度层级，而较大的 scaleFactor 值会减少层级的数量。
-#
-# 检测窗口的尺寸： scaleFactor 的值越小，意味着每个级别的图像金字塔都比前一个级别的图像小，导致检测窗口变小。这可以用于检测小尺寸对象。
-#
-# 通常情况下，scaleFactor 的值设置为大于1.0的小数，例如 1.1。这意味着每个级别的图像金字塔都比前一个级别的图像大约10%，并且会在不同尺度上检测对象。如果 scaleFactor 太小，可能会导致遗漏一些较小的对象，而如果太大，可能会导致检测到太多的假阳性。
-#
-# 调整 scaleFactor 可以根据具体的应用需求来优化对象检测性能。通常，您需要根据您希望检测的对象的大小和数据集的特性来选择合适的值。
+if __name__ == '__main__':
+        img = cv2.imread('red_flower.jpg')
+        hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)      #蓝绿红适合显示，颜色空间适合计算
+        lower_red = (156,50,50) #浅红色
+        upper_red = (180,255,255)
+        mask = cv2.inRange(hsv,lower_red,upper_red)
+        res = cv2.bitwise_and(img, img ,mask = mask)
+        cv2.imshow('img', img)
+        cv2.imshow('res', res)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
 
-
-#用于过滤检测结果的邻居数。增加这个值可以减少假阳性检测。通常设置为3。
-face = face_detectoe.detectMultiScale(gray,
-                                      scaleFactor=1.01,
-                                      minNeighbors=3,
-                                      minSize=(80, 80))
-print(face)
-for x, y, w, h in face:
-    cv2.rectangle(img, (x, y), (x+w, y+h), [255, 0, 255], 3)
-
-cv2.imshow('img', img)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
