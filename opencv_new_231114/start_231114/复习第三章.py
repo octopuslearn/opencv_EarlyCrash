@@ -16,9 +16,9 @@ while cap.isOpened():
             key = cv2.waitKey(1000//24)
             if (key & 0xff == ord('q')):
                 break
-else:
-    print("摄像头打开失败")
-    break
+        else:
+            print("摄像头打开失败")
+            break
 
  #释放VideoCapture
 cap.release()
