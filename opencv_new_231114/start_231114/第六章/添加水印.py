@@ -1,3 +1,9 @@
+#方法：
+# 1.导入图，Logo
+# 2.获得logo掩膜
+# 3.将要添加Logo的图的位置，变成黑色
+# 4.将Logo与要添加logo的位置的图相加
+# 5.将4赋值给要添加水印的图
 import cv2
 import numpy as np
 
