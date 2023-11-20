@@ -43,7 +43,7 @@
       <recent name="E:\project\python\opencv_new_231114\train_231118" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.图像的仿射变换_图像缩放平移旋转的总称">
+  <component name="RunManager" selected="Python.透视变换">
     <configuration name="通道分离合并" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="train_231118" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -57,6 +57,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/通道分离合并.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="透视变换" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="train_231118" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/透视变换.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -193,10 +214,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.透视变换" />
         <item itemvalue="Python.图像的仿射变换_图像缩放平移旋转的总称" />
         <item itemvalue="Python.图片的固定角度旋转_90_180等" />
-        <item itemvalue="Python.图像的深浅拷贝" />
-        <item itemvalue="Python.通道的分割与合并" />
         <item itemvalue="Python.通道分离合并" />
       </list>
     </recent_temporary>
