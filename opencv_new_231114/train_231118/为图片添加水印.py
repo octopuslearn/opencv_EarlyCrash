@@ -163,7 +163,7 @@ logo_fang = cv2.bitwise_and(fang, fang, mask=logo_ym)
 
 # 5.要把logo提取出来
 logo_ym_fan = cv2.bitwise_not(logo_ym)
-# cv2.imshow('logo_ym_fan',logo_ym_fan)
+#cv2.imshow('logo_ym_fan',logo_ym_fan)
 logo_out = cv2.bitwise_and(logo_small,logo_small,mask=logo_ym_fan)
 cv2.imshow('logo_out',logo_out)
 w,h,ch = logo_out.shape
