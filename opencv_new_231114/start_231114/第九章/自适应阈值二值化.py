@@ -23,7 +23,7 @@ skirt_adaptive = cv2.adaptiveThreshold(skirt_gray,maxValue=255,adaptiveMethod=cv
                                        thresholdType=cv2.THRESH_BINARY, blockSize=3, C=0)
 
 skirt_adaptive_1 = cv2.adaptiveThreshold(skirt_gray,maxValue=255,adaptiveMethod=cv2.ADAPTIVE_THRESH_MEAN_C,
-                                       thresholdType=cv2.THRESH_BINARY, blockSize=5, C=0)
+                                       thresholdType=cv2.THRESH_BINARY, blockSize=11, C=0)
 
 cv2.imshow('skirt_adaptive',skirt_adaptive)
 cv2.imshow('skirt_adaptive_1',skirt_adaptive_1)
