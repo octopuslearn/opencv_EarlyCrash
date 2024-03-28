@@ -12,39 +12,39 @@ def hex_to_BGR(hex_color):
 
 # 注：这里需要自己改
 # 定义颜色值
-# hexColors = {  # BGR表示
-#     "DBlue": "#161F7D",
-#     "Blue": "#5DA7E3",
-#     "DGreen": "#193522",
-#     "Green": "#F9E195",
-#     "Black": "#061008",
-#     "White": "#E6EAEB",
-# }
-
 hexColors = {  # BGR表示
-    "DBlue": "#42598d",
-    "Blue": "#9eceff",
+    "DBlue":  "#42598d",
+    "Blue":   "#9eceff",
     "DGreen": "#e6b2b6",
-    "Green": "#fef0e7",
-    "Black": "#363743",
-    "White": "#ffffff",
+    "Green":  "#fef0e7",
+    "Black":  "#363743",
+    "White":  "#ffffff",
 }
 
 colors = {color: hex_to_BGR(value) for color, value in hexColors.items()}
 
 # 读取图像
 # 这里需要自己改
-#image = cv2.imread("origin.jpg")
 image = cv2.imread("./yuan_1/yuan.jpg")
+print(image.shape)
 # 设置缩放倍数
-scale_factor = 0.25
-# scale_factor = 1
+scale_factor_width = 0.2
+scale_factor_height = 0.2
 # 计算目标图像的宽度和高度
-target_width = int(image.shape[1] * scale_factor)
-target_height = int(image.shape[0] * scale_factor)
-# 缩放图像
-image = cv2.resize(image, (target_width, target_height), interpolation=cv2.INTER_LINEAR)
+target_width = int(image.shape[1] * scale_factor_width)
+target_height = int(image.shape[0] * scale_factor_height)
 
+# 缩放图像
+image = cv2.resize(image, (target_width*2, target_height*2), interpolation=cv2.INTER_LINEAR)
+cv2.imshow("yuan", image)
+
+
+
+
+# 缩放图像
+#image = cv2.resize(image, (target_width, target_height), interpolation=cv2.INTER_LINEAR)
+print("resize:")
+print(image.shape)
 
 # 遍历图像的每个像素
 for i in range(image.shape[0]):
@@ -61,14 +61,18 @@ for i in range(image.shape[0]):
 # 显示处理后的图像
 # 创建窗口并设置大小
 cv2.namedWindow("Processed Image", cv2.WINDOW_NORMAL)
-cv2.resizeWindow("Processed Image", 600, 400)  # 设置窗口大小为 600x400 像素
+cv2.resizeWindow("Processed Image", target_width*2, target_height*2)  # 设置窗口大小为 600x400 像素
 
 # 显示处理后的图像
 cv2.imshow("Processed Image", image)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+
 
 # 保存图像到指定目录
 current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
 output_path = f"./yuan_1_1/{current_time}.png"
 cv2.imwrite(output_path, image)
+
+while True:
+    if cv2.waitKey(1) & 0xff == ord("q"):
+        break
+cv2.destroyAllWindows()

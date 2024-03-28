@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 from collections import Counter
-
+import os
 
 def save_color_masks(image, output_directory):
     # 将图像转换为RGB格式
@@ -26,11 +26,11 @@ def save_color_masks(image, output_directory):
 
 # 读取图像
 # 这里需要自己改
-image = cv2.imread("./01/20240229_003227.png")
+image = cv2.imread("./yuan_1_1/20240328_191657.png")
 
 # 创建输出目录
-output_directory = "02"
-import os
+output_directory = "yuan_1_2"
+
 
 if not os.path.exists(output_directory):
     os.makedirs(output_directory)
