@@ -8,8 +8,8 @@ import cv2
 import numpy as np
 
 # 加载两张图片
-image1 = cv2.imread('02/mask_0.png')
-image2 = cv2.imread('02/mask_1.png')
+image1 = cv2.imread('yuan_1_2/mask_0.png')
+image2 = cv2.imread('yuan_1_2/mask_1.png')
 
 # 确保两张图片具有相同的尺寸
 assert image1.shape == image2.shape, "图片尺寸不匹配"
@@ -26,4 +26,4 @@ for y in range(image1.shape[0]):
             output_image[y, x] = np.array([255, 255, 255])
 
 # 保存输出图像
-cv2.imwrite('02_5/remake2.png', output_image)
+cv2.imwrite('yuan_1_2__5/remake2.png', output_image)

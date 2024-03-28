@@ -30,7 +30,11 @@ image = cv2.imread("./yuan_1_1/20240328_191657.png")
 
 # 创建输出目录
 output_directory = "yuan_1_2"
+# 获取当前工作目录
+current_directory = os.getcwd()
 
+# 打印当前工作目录路径
+print("当前工作目录:", current_directory)
 
 if not os.path.exists(output_directory):
     os.makedirs(output_directory)
